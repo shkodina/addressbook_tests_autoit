@@ -11,6 +11,8 @@ namespace addressbook_tests_autoit
         [Test]
         public void TestGroupCreation()
         {
+            //Assert.Pass();
+
             List<GroupData> oldGroups = app.Groups.GetList();
 
             GroupData gr = new GroupData()

@@ -2,11 +2,11 @@
 {
     public class HelperBase
     {
-        protected ApplicationManager applicationManager;
+        protected ApplicationManager manager;
 
         public HelperBase(ApplicationManager applicationManager)
         {
-            this.applicationManager = applicationManager;
+            this.manager = applicationManager;
         }
     }
 }
