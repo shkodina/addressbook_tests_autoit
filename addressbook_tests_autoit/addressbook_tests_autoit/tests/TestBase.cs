@@ -8,7 +8,7 @@ namespace addressbook_tests_autoit
     [TestFixture]
     public class TestBase
     {
-        ApplicationManager app;
+        public ApplicationManager app;
         [SetUp]
         public void InitApp()
         {

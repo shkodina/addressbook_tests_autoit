@@ -6,9 +6,19 @@ namespace addressbook_tests_autoit
 {
     public class ApplicationManager
     {
-        public ApplicationManager() { }
+        private GroupHelper grHelper;
+        public ApplicationManager() {
+            grHelper = new GroupHelper(this);
+        }
 
         public void Stop() { }
 
+        public GroupHelper Groups
+        {
+            get
+            {
+                return grHelper;
+            }
+        }
     }
 }
