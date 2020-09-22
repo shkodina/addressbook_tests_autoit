@@ -13,23 +13,57 @@ namespace addressbook_tests_autoit
         {
             //Assert.Pass();
 
-            List<GroupData> oldGroups = app.Groups.GetList();
+            List<GroupData> oldGroups = UtilGetGroupsList();
 
             GroupData gr = new GroupData()
             {
                 Name = "test"
             };
 
-            app.Groups.Add(gr);
+            app.Groups  .OpenGroupsWindow()
+                        .Add(gr)
+                        .CloseGroupsWindow();
 
-            List<GroupData> newGroups = app.Groups.GetList();
+            List<GroupData> newGroups = UtilGetGroupsList();
 
             oldGroups.Add(gr);
 
             oldGroups.Sort();
             newGroups.Sort();
 
-            //Assert.AreEqual(oldGroups, newGroups);
+            Assert.AreEqual(oldGroups.Count, newGroups.Count);
+        }
+       [Test]
+        public void TestGroupRemoval()
+        {
+            int victumIndex;
+            //Assert.Pass();
+
+            List<GroupData> oldGroups = UtilGetGroupsList();
+
+            victumIndex = oldGroups.Count - 1; // the last one
+
+            GroupData victumGr = oldGroups[victumIndex];
+
+            oldGroups.RemoveAt(victumIndex);
+
+            app.Groups.OpenGroupsWindow()
+                .RemoveAt(victumIndex)
+                .CloseGroupsWindow();
+
+            List<GroupData> newGroups = UtilGetGroupsList();
+
+            oldGroups.Sort();
+            newGroups.Sort();
+
+            Assert.AreEqual(oldGroups.Count, newGroups.Count);
+        }
+
+        private List<GroupData> UtilGetGroupsList()
+        {
+            List<GroupData> groups = app.Groups.OpenGroupsWindow().GetList();
+            app.Groups.CloseGroupsWindow();
+            return groups;
         }
     }
 }

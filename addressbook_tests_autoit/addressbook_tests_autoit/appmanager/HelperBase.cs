@@ -8,5 +8,12 @@
         {
             this.manager = applicationManager;
         }
+
+        public void ThreeStepWinActivate(string winTitle)
+        {
+            manager.Aux.WinWait(winTitle);
+            manager.Aux.WinActivate(winTitle);
+            manager.Aux.WinWaitActive(winTitle);
+        }
     }
 }

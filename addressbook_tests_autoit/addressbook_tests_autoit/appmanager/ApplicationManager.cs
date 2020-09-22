@@ -13,9 +13,14 @@ namespace addressbook_tests_autoit
             grHelper = new GroupHelper(this);
             aux = new AutoItX3();
             aux.Run(BaseConfigData.AppSysPath, "", aux.SW_SHOW);
+
+            grHelper.ThreeStepWinActivate(BaseConfigData.AppMainWindowName);
+
+            /*
             aux.WinWait(BaseConfigData.AppMainWindowName);
             aux.WinActivate(BaseConfigData.AppMainWindowName);
             aux.WinWaitActive(BaseConfigData.AppMainWindowName);
+            */
         }
 
         public void Stop() 
