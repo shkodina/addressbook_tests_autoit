@@ -24,6 +24,16 @@ namespace addressbook_tests_autoit
 
             for (int i = 0; i < int.Parse(strCount); i++)
             {
+                string cmd = "Select";
+                System.Console.Out.WriteLine("Group " + "#0|#" + i + " " + cmd + ": " + manager.Aux.ControlTreeView(
+                    BaseConfigData.AppGrEditorWindowName
+                    , ""
+                    , "WindowsForms10.SysTreeView32.app.0.2c908d51"
+                    , cmd
+                    , "#0|#" + i
+                    , ""
+                    ));
+
                 string itemName = manager.Aux.ControlTreeView(
                     BaseConfigData.AppGrEditorWindowName
                     , ""
@@ -32,6 +42,8 @@ namespace addressbook_tests_autoit
                     , "#0|#" + i
                     , ""
                     );
+
+
                 grList.Add(new GroupData()
                     {
                         Name = itemName

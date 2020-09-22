@@ -97,3 +97,5 @@ C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\add
 C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\addressbook_tests_autoit\obj\Debug\netcoreapp3.1\addressbook_tests_autoit.dll
 C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\addressbook_tests_autoit\obj\Debug\netcoreapp3.1\addressbook_tests_autoit.pdb
 C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\addressbook_tests_autoit\obj\Debug\netcoreapp3.1\addressbook_tests_autoit.genruntimeconfig.cache
+C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\addressbook_tests_autoit\bin\Debug\netcoreapp3.1\AutoItX3.Assembly.dll
+C:\Users\user\Source\Repos\addressbook_tests_autoit\addressbook_tests_autoit\addressbook_tests_autoit\bin\Debug\netcoreapp3.1\AutoItX3.Assembly.xml
