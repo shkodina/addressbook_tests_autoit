@@ -41,7 +41,7 @@ namespace addressbook_tests_autoit
 
             List<GroupData> oldGroups = UtilGetGroupsList();
 
-            if (oldGroups.Count == 1)
+            if (oldGroups.Count <=  1)
             {
                 TestGroupCreation();
                 oldGroups = UtilGetGroupsList();
