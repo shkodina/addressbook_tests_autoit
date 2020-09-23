@@ -41,6 +41,12 @@ namespace addressbook_tests_autoit
 
             List<GroupData> oldGroups = UtilGetGroupsList();
 
+            if (oldGroups.Count == 1)
+            {
+                TestGroupCreation();
+                oldGroups = UtilGetGroupsList();
+            }
+
             victumIndex = oldGroups.Count - 1; // the last one
 
             GroupData victumGr = oldGroups[victumIndex];
